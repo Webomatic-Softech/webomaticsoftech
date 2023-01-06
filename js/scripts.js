@@ -52,3 +52,11 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+
+window.onload = initDate;
+function initDate() {
+
+    let now = new Date();
+    let dtString = now.getFullYear();
+    document.getElementById("spanDate").innerHTML = dtString;
+}
