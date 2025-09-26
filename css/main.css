@@ -1,58 +1,245 @@
-/* =================================================================== 
- *
- *  Sublime v1.0 Main Stylesheet
- *  06-10-2018
- *  ------------------------------------------------------------------
- *
- *  TOC:
- *  # base style overrides
- *    ## links
- *  # typography & general theme styles
- *    ## Lists
- *    ## responsive video container
- *    ## floated image
- *    ## tables
- *    ## Spacing 
- *  # preloader
- *  # forms
- *    ## Style Placeholder Text
- *    ## Change Autocomplete styles
- *  # buttons
- *  # additional components
- *    ## alert box
- *    ## additional typo styles
- *    ## skillbars
- *  # reusable and common theme styles
- *    ## display headings
- *    ## section header
- *    ## grid overlay
- *  # header styles
- *    ## header logo
- *    ## main navigation
- *    ## mobile menu toggle 
- *  # home
- *    ## home content
- *    ## home video link
- *    ## home buttons
- *    ## home scroll
- *    ## home social
- *    ## home animations
- *  # about
- *    ## about process
- *  # services  
- *    ## services list
- *  # works
- *    ## bricks/masonry
- *  # clients
- *  # testimonials
- *  # contact
- *    ## contact social
- *  # footer
- *    ## copyright
- *    ## go top
- *
- * =================================================================== */
 
+/* Hero Stats Section */
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 4rem 0;
+  flex-wrap: wrap;
+}
+
+.stat-item {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(121, 62, 165, 0.1);
+  border-radius: 8px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(121, 62, 165, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(121, 62, 165, 0.2);
+}
+
+.stat-number {
+  display: block;
+  font-size: 3.6rem;
+  font-weight: 700;
+  color: #793ea5;
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+
+.stat-label {
+  display: block;
+  font-size: 1.4rem;
+  color: rgba(255, 255, 255, 0.7);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Highlight Text */
+.highlight {
+  color: #793ea5;
+  background: linear-gradient(135deg, #793ea5, #a855f7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* About Benefits Section */
+.about-benefits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 3rem;
+  margin-top: 4rem;
+}
+
+.benefit-item {
+  text-align: center;
+  padding: 3rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.benefit-item:hover {
+  background: rgba(121, 62, 165, 0.05);
+  border-color: rgba(121, 62, 165, 0.3);
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  margin-bottom: 2rem;
+}
+
+.benefit-icon i {
+  font-size: 4rem;
+  color: #793ea5;
+}
+
+.benefit-item h4 {
+  color: #ffffff;
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.benefit-item p {
+  color: rgba(255, 255, 255, 0.7);
+  line-height: 1.7;
+}
+
+/* Enhanced Service Cards */
+.item-service {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.item-service:hover {
+  background: rgba(121, 62, 165, 0.05);
+  border-color: rgba(121, 62, 165, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.item-service__icon i {
+  transition: all 0.3s ease;
+}
+
+.item-service:hover .item-service__icon i {
+  color: #a855f7;
+  transform: scale(1.1);
+}
+
+/* Enhanced Portfolio Cards */
+.item-folio {
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.item-folio:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+  border-color: rgba(121, 62, 165, 0.3);
+}
+
+.item-folio__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.item-folio__thumb img {
+  transition: transform 0.3s ease;
+}
+
+.item-folio:hover .item-folio__thumb img {
+  transform: scale(1.05);
+}
+
+/* Gradient Overlays */
+.s-home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(121, 62, 165, 0.1), rgba(168, 85, 247, 0.05));
+  pointer-events: none;
+}
+
+/* Industries Section */
+.industries-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.industry-item {
+  text-align: center;
+  padding: 2.5rem 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+}
+
+.industry-item:hover {
+  background: rgba(121, 62, 165, 0.05);
+  border-color: rgba(121, 62, 165, 0.2);
+  transform: translateY(-3px);
+}
+
+.industry-item i {
+  font-size: 3rem;
+  color: #793ea5;
+  margin-bottom: 1.5rem;
+  transition: all 0.3s ease;
+}
+
+.industry-item:hover i {
+  color: #a855f7;
+  transform: scale(1.1);
+}
+
+.industry-item h4 {
+  color: #ffffff;
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+.industry-item p {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+/* Responsive Design Enhancements */
+@media only screen and (max-width: 768px) {
+  .hero-stats {
+    gap: 2rem;
+  }
+
+  .stat-item {
+    padding: 1.5rem;
+    min-width: 120px;
+  }
+
+  .stat-number {
+    font-size: 2.8rem;
+  }
+
+  .about-benefits {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .benefit-item {
+    padding: 2rem 1.5rem;
+  }
+
+  .industries-list {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .industry-item {
+    padding: 2rem 1.5rem;
+  }
+}
 
 /* ===================================================================
  * # base style overrides
